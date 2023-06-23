@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 2.2
+  - jruby
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t suletete/docker-react -f Dockerfile.dev .
+script:
+  - docker run suletete/docker-react npm run test -- --coverage
