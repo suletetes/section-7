@@ -15,3 +15,5 @@ deploy:
   docker_path: "docker"
   on:
     branch: main
+  console_password: $Console password
+  User name: $docker-react
