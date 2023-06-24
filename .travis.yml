@@ -6,3 +6,6 @@ before_install:
   - docker build -t suletete/docker-react -f Dockerfile.dev .
 script:
   - docker run suletete/docker-react npm run test -- --coverage
+deploy:
+  provider: elasticbeanstalk
+  region:
