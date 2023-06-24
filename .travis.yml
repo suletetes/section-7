@@ -8,5 +8,12 @@ script:
   - docker run suletete/docker-react npm run test -- --coverage
 deploy:
   provider: elasticbeanstalk
-  region: "us-west-2"
+  region: " us-west-2"
   app: "docker-react"
+  env: "docker-react-env"
+  bucket_name: "elasticbeanstalk-us-west-2-173801928328"
+  docker_path: "docker"
+  on:
+    branch: main
+  console_password: $Console password
+  User name: $docker-react
